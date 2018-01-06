@@ -9,27 +9,27 @@
                 <div class="col-md-12 ">
                     <div class="col-md-12">
                         <div class="card card-body text-center inforprofile">
-                            <h3><i class="fa fa-history text-success" aria-hidden="true"></i> Lich Bac Sy</h3></h4>
+                            <h3 ><i class="fa fa-calendar" aria-hidden="true"></i> <span style="color:red">LỊCH BÁC SĨ SIÊU ÂM</span> </h3>
 
                             <div class="card text-center">
                                 <table class="table table-hover table-bordered">
                                     <thead >
                                         <tr>
                                             <th class="text-center">{{ trans('message.room') }}</th>
-                                            <th class="text-center">Thu 2</th>
-                                            <th class="text-center">Thu 3</th>
-                                            <th class="text-center">Thu 4</th>
-                                            <th class="text-center">Thu 5</th>
-                                            <th class="text-center">Thu 6</th>
-                                            <th class="text-center">Thu 7</th>
-                                            <th class="text-center">Chu nhat</th>
-                                        </tr>   
+                                            <th class="text-center">Thứ 2</th>
+                                            <th class="text-center">Thứ 3</th>
+                                            <th class="text-center">Thứ 4</th>
+                                            <th class="text-center">Thứ 5</th>
+                                            <th class="text-center">Thứ 6</th>
+                                            <th class="text-center">Thứ 7</th>
+                                            <th class="text-center">Chủ Nhật</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                     @if (isset($calendars))
                                     @foreach ($calendars as $item)
                                         <tr >
-                                            <th class="text-center">{{ $item->name }}</th>
+                                            <th  class="text-center">{{ $item->name }}</th>
                                             <th class="text-center">
                                                 @foreach ($item->doctorCalender as $doctor)
                                                     @if ($doctor->mon == config('custom.calendar.yes'))
@@ -81,13 +81,13 @@
                                             </th>
                                         </tr>
                                     @endforeach
-                                    @endif    
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div>      
+                </div>
             </div>
             @include('sites._include.mucluc')
         </div>

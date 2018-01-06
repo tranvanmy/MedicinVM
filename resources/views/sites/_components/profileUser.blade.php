@@ -14,11 +14,11 @@
                       </div>
                             <div class=" text-center">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
+                                    {{-- <li class="list-group-item">
                                         <p>
                                             <i class="fa fa-id-card-o text-success" aria-hidden="true"></i> Mã bệnh nhân: <span class="badge badge-success">{{ $patient->id }}</span>
                                         </p>
-                                    </li>
+                                    </li> --}}
                                     <li class="list-group-item">
                                         <p>
                                             <i class="fa fa-bandcamp text-info" aria-hidden="true"></i> Họ tên: {{ $patient->name }}

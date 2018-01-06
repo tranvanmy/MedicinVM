@@ -1,6 +1,6 @@
 <?php
 
-/*  
+/*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -55,7 +55,6 @@ Route::post('/dangnhap', 'LoginAdminController@postLogin')->name('loginadmin');
 Route::group(['namespace' => 'Site', 'prefix' => 'profile', 'middleware' => 'auth'], function () {
     Route::get('/thong-tin-ca-nhan/{id}', 'PatientController@show')->name('patient.profile.show');
     Route::get('/lich-su-kham/{id}', 'HistoryController@show')->name('patient.history.show');
-    Route::get('/lich-bac-sy', 'DoctorCalenderController@index')->name('doctor.calender.show');
     Route::get('/video-sieu-am', function () {
 	    return view('sites._components.userVideo', ['user' => Auth::user()]);
 		});
@@ -65,7 +64,7 @@ Route::group(['namespace' => 'Site'], function() {
     Route::get('/chitiet/chuyenkhoa/{id}', 'IndexController@detailSpecial')->name('chitiet');
     Route::get('/danhchuyenkhoa', 'IndexController@listSpecial')->name('danhsach');
     Route::get('/', 'IndexController@index')->name('index');
-
+    Route::get('/lich-bac-sy', 'DoctorCalenderController@index')->name('doctor.calender.show');
     Route::get('/gioithieu', 'IntroController@index')->name('introduce');
 
     Route::get('/lienhe', 'ContactController@index')->name('contact');
