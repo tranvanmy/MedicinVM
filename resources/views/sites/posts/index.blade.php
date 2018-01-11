@@ -35,7 +35,7 @@
                         @foreach ($posts as $post)
                             <div class="row-item row">
                                 <div class="col-md-4 col-lg-3">
-                                    <a href="{{ route('page.post.show', ['category' => $post->categories->link, 'post_name' => str_replace(' ', '-', $post->title)] ) }}">
+                                    <a href="{{ route('page.post.show', ['category' => $post->categories->link, 'post_name' => str_replace(' ', '-', str_replace('/', '_', $post->title))] ) }}">
                                         <img  class="img-responsive img-post img-thumbnail" src="{{ $post->image }}" alt="">
                                     </a>
                                 </div>
@@ -43,7 +43,7 @@
                                     <h5>{{ $post->title }}</h5>
                                     <small><i class='fa fa-calendar-o'></i> <i>{{ $post->created_at->format('d/m/Y') }}</i></small>
                                     <p>{!! substr($post->content, 0, 400) !!}...</p>
-                                    <a class="btn btn-outline-success btn-sm" href="{{ route('page.post.show', ['category' => $post->categories->link, 'post_name' => str_replace(' ', '-', $post->title)] ) }}">Xem thêm <span class="glyphicon glyphicon-chevron-right"></span></a>
+                                    <a class="btn btn-outline-success btn-sm" href="{{ route('page.post.show', ['category' => $post->categories->link, 'post_name' => str_replace(' ', '-', str_replace('/', '_', $post->title))] ) }}">Xem thêm <span class="glyphicon glyphicon-chevron-right"></span></a>
                                 </div>
                                 <div class="break"></div>
 

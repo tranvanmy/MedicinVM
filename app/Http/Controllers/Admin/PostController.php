@@ -185,7 +185,7 @@ class PostController extends Controller
                 return back();
             }
         } else {
-                $data['title'] = str_replace( '/', '-', $request->title );
+                $data['title'] = $request->title;
                 $data['description'] = $request->description;
                 $data['content'] = $request->content;
                 $data['category_id'] = $request->category_id;

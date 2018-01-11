@@ -47,7 +47,6 @@ var followView = new Vue({
             if (!confirm('Do you want to update this post!')) return;
             var input = this.postItem;
             input.image = this.imageData;
-            input.title = ((this.postItem.title).replace(/\//g, "-"));
             var content = CKEDITOR.instances['content'].getData();
             input.content = content;
             axios.post('/admin/post', input).then((response) => {
