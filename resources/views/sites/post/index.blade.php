@@ -48,12 +48,12 @@
                            <!-- item -->
                            <div class="row" style="margin-top: 10px;">
                               <div class="col-md-5">
-                                 <a href="{{ route('page.post.show', ['category' => str_replace(' ', '-', $item->categories->name), 'post_name' => str_replace(' ', '-', $item->title)] ) }}">
+                                 <a href="{{ route('page.post.show', ['category' => str_replace(' ', '-', $item->categories->name), 'post_name' => str_replace(' ', '-', str_replace('/', '_', $post->title))] ) }}">
                                  <img class="img-responsive" width="100%" height='100%' src="{{ $item->image }}" alt="">
                                  </a>
                               </div>
                               <div class="col-md-7 ">
-                                 <a class='title-related-post' href="{{ route('page.post.show', ['category' => str_replace(' ', '-', $item->categories->name), 'post_name' => str_replace(' ', '-', $item->title)] ) }}">{{ substr($item->title, 0, 20) }}...</a>
+                                 <a class='title-related-post' href="{{ route('page.post.show', ['category' => str_replace(' ', '-', $item->categories->name), 'post_name' => str_replace(' ', '-', str_replace('/', '_', $post->title))] ) }}">{{ substr($item->title, 0, 20) }}...</a>
                               </div>
                               <div class="break"></div>
                            </div>

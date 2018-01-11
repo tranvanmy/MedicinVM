@@ -46,7 +46,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $posts = $this->post->getAllPostNew(['categories']);
+        $posts = $this->post->getAllPostNew();
         $i = 0;
         $postNewest = [];
         if (!empty($posts)) {
@@ -74,7 +74,6 @@ class IndexController extends Controller
             $videoIntro = asset(config('custom.media.video_intro.defaultPath') . $this->media->getVideoIntro([])->path);
         }
         
-
         $specicals = $this->specical->getAll(1);
 
         return view('index', compact('postNewest', 'sliders', 'videoIntro', 'specicals'));
