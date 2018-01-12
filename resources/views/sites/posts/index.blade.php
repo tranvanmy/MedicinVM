@@ -72,12 +72,19 @@
 
 @include('sites._include.footer')
 @endsection
-
+@section('script')
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //fix 25% col-md-3 ??? what the fk
+      $(".col-md-3").css({"max-width":"100%"})
+      console.log("ok");
+    })
+  </script>
+@endsection
 @section('style')
-  {{ Html::style('css/sites/gioithieu.css') }}
+  {{ Html::style('css/sites/gioithieu/gioithieu.css') }}
   {{ Html::style('css/sites/_include/navbar.css') }}
   {{ Html::style('css/sites/_include/footer.css') }}
   {{ Html::style('css/sites/_include/banner.css') }}
   {{ Html::style('css/sites/_include/news.css') }}
 @endsection
-

@@ -16,7 +16,7 @@
       </div>
       <div class="row">
           <div class="panel panel-default" style="width:1000px;">
-            
+
             @if (isset($postNewest))
                 @foreach ($postNewest as $post)
                     <div class="row-item row">
