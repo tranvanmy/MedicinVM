@@ -33,7 +33,7 @@
             </iframe>
         </div>
     </div>
-    <div class="row">
+    {{-- <div class="row">
         <!-- Form -->
         <div class="nb-form">
             <p class="title">Để lại tin nhắn cho phòng khám</p>
@@ -49,6 +49,6 @@
                 <input type="submit" value="Gửi">
             </form>
         </div>
-    </div>
+    </div> --}}
 </div>
 </footer>

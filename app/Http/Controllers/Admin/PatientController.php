@@ -78,7 +78,8 @@ class PatientController extends Controller
         $data['password'] = $data['phone'];
 
         $dateTime = Carbon\Carbon::now()->toDateTimeString();
-        $dateTimeFormated = str_replace(['-', ' ', ':'], ['', '_', ''], $dateTime);
+        $dateTimeFormated = str_replace(['-', ' ', ':'], ['', '', ''], $dateTime);
+        $dateTimeFormated = substr($dateTimeFormated,2);
 
         if (!$data['email']) {
             $data['email'] = $dateTimeFormated;
@@ -192,10 +193,11 @@ class PatientController extends Controller
     public function search(Request $request)
     {
         $keyword = $request->name;
+        if($keyword == '') {
+          return $this->list();
+        }
         $keyword = Helper::handleSearchkeyword($keyword);
-
         $patients = $this->patient->searchByName($keyword, []);
-
         return Response::json($patients, 200);
     }
 }

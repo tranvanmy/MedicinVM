@@ -57,9 +57,9 @@
     </style>
 </head>
 <body>
-  <div class="element">
+  {{-- <div class="element">
     <img src="images/call.png" class='img-responsive' width="250px">
-  </div>
+  </div> --}}
 
     @yield('content')
     {{ Html::script('bower/jquery/dist/jquery.min.js') }}

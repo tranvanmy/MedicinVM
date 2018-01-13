@@ -86,7 +86,9 @@
                               @if(Auth::user()->permission == 1)
                                 <th>Xóa</th>
                               @endif
+                              @if(Auth::user()->permission == 1)
                               <th>Chỉnh sửa</th>
+                              @endif
                             </tr>
                           </thead>
                           <tbody>
@@ -105,10 +107,10 @@
                                       <button onclick="return alert()" type="submit" class="btn btn-danger" ><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;&nbsp;Xóa</button>
                                   </form>
                                 </td>
-                                @endif
                                 <td>
                                   <button data-content= "{{ $history->content }}" data-history-id="{{ $history->id }}" data-toggle="modal" data-target="#addVideo" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Chỉnh sửa</button>
                                 </td>
+                                @endif
                               </tr>
                             @endforeach
                           </tbody>

@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- right col-->
             <section class="col-lg-5 connectedSortable">
                 <!-- Map box -->
@@ -99,7 +99,7 @@
                 </div>
                 <div class="box-body">
                     <div id="world-map" style="height: 250px; width: 100%;"></div>
-                </div>>
+                </div>
                 <!-- /.box -->
             </section>
         </div>

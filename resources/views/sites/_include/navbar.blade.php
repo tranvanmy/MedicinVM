@@ -29,7 +29,7 @@
             @endforeach
           </div>
         @else
-          <a class="nav-link format_font" href="{{ route('posts.index', ['category' => $category->link ]) }}">{{ strtoupper($category->name) }}</a>
+          <a class="nav-link format_font" href="{{ route('posts.index', ['category' => $category->link ]) }}">{{ $category->name }}</a>
         @endif
         </li>
       @endforeach
@@ -43,7 +43,7 @@
       @else
       <li style="cursor: pointer" class="nav-item dropdown text-center">
         <a class="nav-link dropdown-toggle" data-target="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ strtoupper(Auth::user()->name) }}
+          {{ mb_strtoupper(Auth::user()->name) }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
