@@ -7,6 +7,7 @@
     <title>@yield('siteTitle')</title>
     <base href='{{ asset('') }}'>
     <link rel="icon" type='image/png' href="favicon.png">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favico/apple-icon-60x60.png">

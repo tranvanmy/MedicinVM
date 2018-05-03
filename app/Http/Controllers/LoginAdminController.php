@@ -23,7 +23,6 @@ class LoginAdminController extends Controller
           }
         }
 
-        // dd('what');
         return view('sites.loginadmin.index');
     }
 

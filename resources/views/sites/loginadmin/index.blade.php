@@ -28,6 +28,7 @@
                     <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ trans('message.Remenber')}}
                 </label>
                 <br>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <button type="submit">{{ trans('message.SignIn')}}</button>
                 <br/>
             </form>

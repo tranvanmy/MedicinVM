@@ -34,6 +34,7 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
+        dd(1);
         if ($request->ajax()) {
             $userList = $this->user->getAllUser('1', '2', '3','10');
             $response = [

@@ -19,4 +19,5 @@ public/bower
 /resources/views/vendor/
 resources/views/vendor/
 dump.rdb
-.DS_Store
+.DS_Stor
+.docker
