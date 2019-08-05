@@ -4,7 +4,6 @@
 /public/ck
 /storage/*.key
 /vendor
-/public/bower
 /.idea
 /.vagrant
 Homestead.json
@@ -12,10 +11,8 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
-/public/bower
 /public/vendor
 public/vendor
-public/bower
 /resources/views/vendor/
 resources/views/vendor/
 dump.rdb

@@ -1,0 +1,14 @@
+{
+  "name": "vue-paginate",
+  "homepage": "https://github.com/TahaSh/vue-paginate",
+  "version": "3.5.0",
+  "_release": "3.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.5.0",
+    "commit": "901075c2ef3f1f08fa69fc24a121115b4eb47048"
+  },
+  "_source": "https://github.com/TahaSh/vue-paginate.git",
+  "_target": "^3.5.0",
+  "_originalSource": "vue-paginate"
+}
